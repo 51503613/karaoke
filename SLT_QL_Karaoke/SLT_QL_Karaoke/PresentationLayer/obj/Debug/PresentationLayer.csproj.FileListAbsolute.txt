@@ -39,3 +39,17 @@ F:\Visual\karaokesoft\soft\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\bin\D
 F:\Visual\karaokesoft\soft\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
 F:\Visual\karaokesoft\soft\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
 F:\Visual\karaokesoft\soft\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\bin\Debug\PresentationLayer.dll
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\bin\Debug\PresentationLayer.pdb
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\obj\Debug\PresentationLayer.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\obj\Debug\PresentationLayer.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\obj\Debug\PresentationLayer.dll
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PresentationLayer\obj\Debug\PresentationLayer.pdb

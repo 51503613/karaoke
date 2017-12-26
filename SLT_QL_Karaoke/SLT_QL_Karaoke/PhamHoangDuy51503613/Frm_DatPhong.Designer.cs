@@ -434,6 +434,7 @@
             this.dgv_PhieuDatPhong.ReadOnly = true;
             this.dgv_PhieuDatPhong.Size = new System.Drawing.Size(727, 160);
             this.dgv_PhieuDatPhong.TabIndex = 0;
+            this.dgv_PhieuDatPhong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_PhieuDatPhong_CellContentClick);
             this.dgv_PhieuDatPhong.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_PhieuDatPhong_CellEnter);
             // 
             // SoPD

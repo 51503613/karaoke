@@ -35,7 +35,7 @@ namespace PhamHoangDuy51503613.QLNguoiDung
 
         public void ShowDatabase()
         {
-            ChuoiConnect = @"Data Source=.\SQLEXpress;Integrated Security=True";
+            ChuoiConnect = @"Data Source=HOANGDUY;Initial Catalog=AP;Integrated Security=True";
             Conn = new SqlConnection(ChuoiConnect);
             Conn.Open();
             //sql="EXEC sp_databases";

@@ -17,3 +17,13 @@ F:\Visual\karaokesoft\soft\SLT_QL_Karaoke\SLT_QL_Karaoke\DataAccessLayer\bin\Deb
 F:\Visual\karaokesoft\soft\SLT_QL_Karaoke\SLT_QL_Karaoke\DataAccessLayer\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
 F:\Visual\karaokesoft\soft\SLT_QL_Karaoke\SLT_QL_Karaoke\DataAccessLayer\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 F:\Visual\karaokesoft\soft\SLT_QL_Karaoke\SLT_QL_Karaoke\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\DataAccessLayer\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\DataAccessLayer\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\DataAccessLayer\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\DataAccessLayer\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

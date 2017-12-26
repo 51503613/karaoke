@@ -188,6 +188,7 @@
             this.dgv_danhsachkh.Name = "dgv_danhsachkh";
             this.dgv_danhsachkh.Size = new System.Drawing.Size(867, 203);
             this.dgv_danhsachkh.TabIndex = 0;
+            this.dgv_danhsachkh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_danhsachkh_CellContentClick);
             this.dgv_danhsachkh.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_danhsachkh_CellEnter);
             // 
             // MaKH

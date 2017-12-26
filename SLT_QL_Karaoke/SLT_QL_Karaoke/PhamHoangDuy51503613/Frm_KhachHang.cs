@@ -261,9 +261,9 @@ namespace PhamHoangDuy51503613
             }
         }
 
-       
+        private void dgv_danhsachkh_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-       
-        
+        }
     }
 }

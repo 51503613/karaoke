@@ -97,7 +97,7 @@
             // 
             this.txt_matmamoi.Location = new System.Drawing.Point(129, 90);
             this.txt_matmamoi.Name = "txt_matmamoi";
-            this.txt_matmamoi.PasswordChar = '^';
+            this.txt_matmamoi.PasswordChar = '*';
             this.txt_matmamoi.Size = new System.Drawing.Size(173, 23);
             this.txt_matmamoi.TabIndex = 1;
             // 

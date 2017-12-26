@@ -250,6 +250,7 @@
             this.lst_CTHoaDon.TabIndex = 1;
             this.lst_CTHoaDon.UseCompatibleStateImageBehavior = false;
             this.lst_CTHoaDon.View = System.Windows.Forms.View.Details;
+            this.lst_CTHoaDon.SelectedIndexChanged += new System.EventHandler(this.lst_CTHoaDon_SelectedIndexChanged);
             // 
             // STT
             // 
@@ -509,7 +510,7 @@
         private System.Windows.Forms.Label lbl_TienGio;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbl_TongTienDV;
-        private System.Windows.Forms.ListView lst_CTHoaDon;
+        public System.Windows.Forms.ListView lst_CTHoaDon;
         private System.Windows.Forms.ColumnHeader STT;
         private System.Windows.Forms.ColumnHeader TenDV;
         private System.Windows.Forms.ColumnHeader DonGia;

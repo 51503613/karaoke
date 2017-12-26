@@ -141,8 +141,10 @@ namespace PhamHoangDuy51503613
 
         private void Frm_ThanhToan_Load(object sender, EventArgs e)
         {
+
             ShowThongTinTT();
-            GetTablNP(MaPH);
+
+            //GetTablNP(MaPH);
         }
 
         public void ShowThongTinTT()
@@ -155,37 +157,11 @@ namespace PhamHoangDuy51503613
             lbl_GioRa.Text = GioRa;
             lbl_SoTieng.Text = SoTiengGio;
             lbl_LoaiPhong.Text = NameLP;
-            lbl_TienGio.Text = double.Parse(TienGio.ToString()).ToString("#,##0 VND");
+            lbl_TienGio.Text = double.Parse(TienGio.ToString()).ToString("#,##0 VND");//"3000000 VND";
             lbl_TongTienDV.Text = TienDV;
         }
 
-        public void GetTablNP(string sDk)
-        {
-            if (sDk != "")
-            {
-                //Lay Thong Tin CTDichVu
-                double ThanhTien = 0;
-                DataTable TblCTDichVu = CTDichVu_PTA.GetTableDVPhong(" where CTDichVu.MaPH='" + sDk + "'");
-                if (TblCTDichVu.Rows.Count != 0)
-                {
-                    ListViewItem item;
-                    lst_CTHoaDon.Items.Clear();
-                    for (int i = 0; i < TblCTDichVu.Rows.Count; i++)
-                    {
-                        item = new ListViewItem((i + 1).ToString());
-                        item.SubItems.Add(TblCTDichVu.Rows[i]["TenDV"].ToString());
-                        item.SubItems.Add(TblCTDichVu.Rows[i]["DonGia"].ToString());
-                        item.SubItems.Add(TblCTDichVu.Rows[i]["SoLuong"].ToString());
-                        ThanhTien = float.Parse(TblCTDichVu.Rows[i]["DonGia"].ToString()) * int.Parse(TblCTDichVu.Rows[i]["SoLuong"].ToString());
-                        item.SubItems.Add(ThanhTien.ToString("#,##0 VND"));
-                        lst_CTHoaDon.Items.Add(item);
-                    }
-
-                }
-
-            }
-
-        }
+        
 
         private void btn_HoaDon_Click(object sender, EventArgs e)
         {
@@ -265,6 +241,9 @@ namespace PhamHoangDuy51503613
            
         }
 
-        
+        private void lst_CTHoaDon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

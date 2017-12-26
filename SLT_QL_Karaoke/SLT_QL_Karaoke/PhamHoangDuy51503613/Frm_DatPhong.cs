@@ -383,7 +383,7 @@ namespace PhamHoangDuy51503613
                 }
                 else
                 {
-                    DialogResult kq = MessageBox.Show("Bạn có muốn huy phiếu đăt của khách hàng " + txt_TenKH.Text, "Thông Báo", MessageBoxButtons.YesNo);
+                    DialogResult kq = MessageBox.Show("Bạn có muốn hủy phiếu đặt của khách hàng " + txt_TenKH.Text, "Thông Báo", MessageBoxButtons.YesNo);
                     if (kq == DialogResult.Yes)
                     {
                        
@@ -461,6 +461,11 @@ namespace PhamHoangDuy51503613
             GetTablPhongDK(swhere);
             ShowTreeView(TblLoaiPhong, DsPhong.Tables[0], trv_DanhSachPhong);
            
+        }
+
+        private void dgv_PhieuDatPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         public void GetTablPhongDK(string sDK)

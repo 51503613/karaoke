@@ -224,6 +224,7 @@
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Chi Tiết Dịch Vụ";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // Gpb_ThongTin
             // 

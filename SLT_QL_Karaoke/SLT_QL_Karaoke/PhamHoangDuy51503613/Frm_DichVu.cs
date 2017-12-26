@@ -213,7 +213,7 @@ namespace PhamHoangDuy51503613
         {
             if (DGV_DichVu.CurrentRow.Index != -1)
             {
-                DialogResult kq = MessageBox.Show("Bạn Có Muốn Xóa Phòng " + txt_TenDV.Text + " Không!", "Thông Báo", MessageBoxButtons.YesNo);
+                DialogResult kq = MessageBox.Show("Bạn Có Muốn Xóa " + txt_TenDV.Text + " Không!", "Thông Báo", MessageBoxButtons.YesNo);
                 if (kq == DialogResult.Yes)
                 {
                     DV_Data.MaDV = DGV_DichVu.CurrentRow.Cells[0].Value.ToString();
@@ -230,6 +230,11 @@ namespace PhamHoangDuy51503613
             {
                 e.Handled = true;
             }
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

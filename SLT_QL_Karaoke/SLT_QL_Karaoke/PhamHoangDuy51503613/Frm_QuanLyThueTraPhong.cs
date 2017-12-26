@@ -557,18 +557,19 @@ namespace PhamHoangDuy51503613
         {
             txt_SoLuon.Clear();
             double kqTongTien = 0;
-            if (sMaPHID != ""||sMaPNDelete!="")
+            if (sMaPHID != "" && sMaPNDelete!="")
             {
                 
                 sGioRa = DateTime.Now.ToShortTimeString();
                 sTempRa = DateTime.Now.ToString();
                 lbl_Giora.Text = sGioRa;
-                lbl_TGHat.Text = TinhGio(lbl_Giovao.Text, sGioRa);
+                var time = TinhGio(lbl_Giovao.Text, sGioRa);
+                lbl_TGHat.Text = time.Hours + ":" + time.Minutes.ToString("00");
                 if (lbl_TienDatCoc.Text != "")
-                    kqTongTien = double.Parse(TinhTienTheoGio(lbl_TGHat.Text)) + TongTienDV - float.Parse(lbl_TienDatCoc.Text);
+                    kqTongTien = double.Parse(TinhTienTheoGio(time)) + TongTienDV - float.Parse(lbl_TienDatCoc.Text);
                 else
-                    kqTongTien = double.Parse(TinhTienTheoGio(lbl_TGHat.Text)) + TongTienDV;
-                TienGio = double.Parse(TinhTienTheoGio(lbl_TGHat.Text)).ToString();
+                    kqTongTien = double.Parse(TinhTienTheoGio(time)) + TongTienDV;
+                TienGio = double.Parse(TinhTienTheoGio(time)).ToString();
                 lbl_TongTien.Text = kqTongTien.ToString("#,##0 VND");
                 PH_DATA.TrangThai = 0;
                 PH_DATA.NgayVao = "0";
@@ -606,7 +607,7 @@ namespace PhamHoangDuy51503613
                 TongTienPhong = lbl_TongTien.Text;
                 TienDV = lbl_ThanhTien.Text;
                 NameKH = txt_KhachHang.Text;
-                
+                MessageBox.Show("Tra phong thanh cong !!!", "Thong Bao");
 
             }
             else
@@ -675,47 +676,43 @@ namespace PhamHoangDuy51503613
             }
         }
 
-        public string TinhTienTheoGio(string sDk)
+        public string TinhTienTheoGio(TimeSpan time)
         {
             double dTienGio = 0;
             try
             {
                 
                 int iTienGio, iTienPhut;
-                if (sDk != "")
+                iTienGio = time.Hours;
+                iTienPhut = time.Minutes;
+                float fgiaphong = float.Parse(TinhGiaPhong(lbl_Giovao.Text));
+                if (iTienGio <= 3)
                 {
-                    string[] smangtien = sDk.Split(':');
-                    iTienGio = int.Parse(smangtien[0].ToString());
-                    iTienPhut = int.Parse(smangtien[1].ToString());
-                    float fgiaphong = float.Parse(TinhGiaPhong(lbl_Giovao.Text));
-                    if (iTienGio <= 3)
+                    if (iTienGio != 0)
                     {
-                        if (iTienGio != 0)
-                        {
-                            if (iTienPhut <= 45 && iTienPhut >= 20)
-                                dTienGio = fgiaphong * iTienGio + fgiaphong * 0.5;
-                            else if (iTienPhut <= 60 && iTienPhut >= 45)
-                                dTienGio = fgiaphong * iTienGio + fgiaphong * 0.3;
-                            else
-                                dTienGio = fgiaphong * iTienGio;
-                        }
+                        if (iTienPhut <= 45 && iTienPhut >= 20)
+                            dTienGio = fgiaphong * iTienGio + fgiaphong * 0.5;
+                        else if (iTienPhut <= 60 && iTienPhut >= 45)
+                            dTienGio = fgiaphong * iTienGio + fgiaphong * 0.3;
                         else
-                            dTienGio = fgiaphong;
+                            dTienGio = fgiaphong * iTienGio;
                     }
                     else
+                        dTienGio = fgiaphong;
+                }
+                else
+                {
+                    if (iTienGio != 0)
                     {
-                       if(iTienGio!=0)
-                       {
-                           if (iTienPhut <= 45 && iTienPhut >= 20)
-                               dTienGio = fgiaphong * iTienGio + ((iTienGio - 3) * (fgiaphong / 100 * 70)) + fgiaphong * 0.5;
-                           else if (iTienPhut <= 60 && iTienPhut >= 45)
-                               dTienGio = fgiaphong * iTienGio + ((iTienGio - 3) * (fgiaphong / 100 * 70)) + fgiaphong * 0.3;
-                           else
-                               dTienGio = fgiaphong * iTienGio + ((iTienGio - 3) * (fgiaphong / 100 * 70));
-                       }
-                       else
-                           dTienGio = fgiaphong ;
+                        if (iTienPhut <= 45 && iTienPhut >= 20)
+                            dTienGio = fgiaphong * iTienGio + ((iTienGio - 3) * (fgiaphong / 100 * 70)) + fgiaphong * 0.5;
+                        else if (iTienPhut <= 60 && iTienPhut >= 45)
+                            dTienGio = fgiaphong * iTienGio + ((iTienGio - 3) * (fgiaphong / 100 * 70)) + fgiaphong * 0.3;
+                        else
+                            dTienGio = fgiaphong * iTienGio + ((iTienGio - 3) * (fgiaphong / 100 * 70));
                     }
+                    else
+                        dTienGio = fgiaphong;
                 }
 
             }
@@ -727,60 +724,12 @@ namespace PhamHoangDuy51503613
             return dTienGio.ToString();
         }
 
-        public string TinhGio(string sGvao,string sGRa)
+        public TimeSpan TinhGio(string sGvao,string sGRa)
         {
-            int kqPhut = 0, kqGio = 0;
-            int ikqchang, ikqle;
-            int iBatDau, iKetThuc;
-            string Result = "";
-            string[] smangGVao1 = sGvao.Split(' ');
-            string[] smangGRa1 =  sGRa.Split(' ');
-
-            string[] smangGVao2 = smangGVao1[0].Split(':');
-            string[] smangGRa2 = smangGRa1[0].Split(':');
-            int iVao=0,iRa=0;
-            iVao=int.Parse(smangGVao2[1].ToString());
-            iRa=int.Parse(smangGRa2[1].ToString());
-            iBatDau = int.Parse(smangGVao2[0].ToString());
-            iKetThuc = int.Parse(smangGRa2[0].ToString());
-            if(smangGVao1[1].ToString()==smangGRa1[1].ToString())
-            {
-                kqGio = iKetThuc - iBatDau;
-                if (iRa < iVao)
-                {
-                    kqPhut = kqGio * 60 + iRa - iVao;
-                    ikqchang = kqPhut / 60;
-                    ikqle = kqPhut % 60;
-                    if (ikqchang == 0)
-                        if (ikqle.ToString().Length <= 1)
-                            Result = "0:0" + ikqle.ToString();
-                        else
-                            Result = "0:" + ikqle.ToString();
-                    else
-                        if (ikqle.ToString().Length <= 1)
-                            Result = ikqchang + ":0" + ikqle.ToString();
-                        else
-                            Result = ikqchang + ":" + ikqle.ToString();
-                }
-                else
-                {
-                    kqPhut = iRa - iVao;
-                    if (kqGio == 0)
-                        if (kqPhut.ToString().Length <= 1)
-                            Result = "0:0" + kqPhut.ToString();
-                        else
-                            Result = "0:" + kqPhut.ToString();
-                    else
-                        if (kqPhut.ToString().Length <= 1)
-                            Result = kqGio + ":0" + kqPhut.ToString();
-                        else
-                            Result = kqGio + ":" + kqPhut.ToString();
-                }
-            }
-            else
-            {
-                TinhGioKhac(sTempVao, DateTime.Now.ToString());
-            }
+            DateTime vao, ra = DateTime.MinValue;
+            DateTime.TryParse(sGvao, out vao);
+            DateTime.TryParse(sGRa, out ra);
+            var Result = ra - vao;
 
             return Result;
         }
@@ -892,7 +841,7 @@ namespace PhamHoangDuy51503613
             PH_DATA.MaLoai = TblPhong.Rows[0]["MaLoai"].ToString();            
             PH_PTA.Insert_Update_Delete(PH_DATA, "Update");
         }
-
+        
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
             Frm_ThanhToan FrmTToan = new Frm_ThanhToan();
@@ -908,9 +857,29 @@ namespace PhamHoangDuy51503613
             FrmTToan.TongTienPhong = TongTienPhong;
             FrmTToan.TienDV = TienDV;
             FrmTToan.Delete = Delete;
+            double ThanhTien = 0;
+            DataTable TblCTDichVu = CTDichVu_PTA.GetTableDVPhong(" where CTDichVu.MaPH='" + MaPH + "'");
+            if (TblCTDichVu.Rows.Count != 0)
+            {
+                ListViewItem item;
+                FrmTToan.lst_CTHoaDon.Items.Clear();
+                for (int i = 0; i < TblCTDichVu.Rows.Count; i++)
+                {
+                    item = new ListViewItem((i + 1).ToString());
+                    item.SubItems.Add(TblCTDichVu.Rows[i]["TenDV"].ToString());
+                    item.SubItems.Add(TblCTDichVu.Rows[i]["DonGia"].ToString());
+                    item.SubItems.Add(TblCTDichVu.Rows[i]["SoLuong"].ToString());
+                    ThanhTien = float.Parse(TblCTDichVu.Rows[i]["DonGia"].ToString()) * int.Parse(TblCTDichVu.Rows[i]["SoLuong"].ToString());
+                    item.SubItems.Add(ThanhTien.ToString("#,##0 VND"));
+                    FrmTToan.lst_CTHoaDon.Items.Add(item);
+                }
+
+            }
+
+
             ShowlistviewCTDV("");
-            //Insert_Delete_CTDichVu(sMaPHID);
-            ////Inser_Delete_UpdateDatPhong(sMaPHID);
+            Insert_Delete_CTDichVu(sMaPHID);
+            //Inser_Delete_UpdateDatPhong(sMaPHID);
 
             //dung them vao hoa don
             string smadvid = "";

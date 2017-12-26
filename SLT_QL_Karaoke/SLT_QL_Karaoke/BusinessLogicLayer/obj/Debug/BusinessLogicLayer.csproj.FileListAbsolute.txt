@@ -27,3 +27,11 @@ F:\Visual\karaokesoft\soft\SLT_QL_Karaoke\SLT_QL_Karaoke\BusinessLogicLayer\obj\
 F:\Visual\karaokesoft\soft\SLT_QL_Karaoke\SLT_QL_Karaoke\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
 F:\Visual\karaokesoft\soft\SLT_QL_Karaoke\SLT_QL_Karaoke\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
 F:\Visual\karaokesoft\soft\SLT_QL_Karaoke\SLT_QL_Karaoke\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb

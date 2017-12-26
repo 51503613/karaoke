@@ -46,3 +46,4 @@ C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PhamHoangDuy51503613\b
 C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PhamHoangDuy51503613\bin\Debug\PresentationLayer.pdb
 C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PhamHoangDuy51503613\obj\Debug\PhamHoangDuy51503613.exe
 C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PhamHoangDuy51503613\obj\Debug\PhamHoangDuy51503613.pdb
+C:\Users\ASUS\Desktop\Final\SLT_QL_Karaoke\SLT_QL_Karaoke\PhamHoangDuy51503613\bin\Debug\Microsoft.ReportViewer.DataVisualization.DLL
